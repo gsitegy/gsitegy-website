@@ -1,81 +1,200 @@
-/* styles.css - shared by all pages (GSITEGY AI & Cloud) */
-:root{
-  --brand:#5b21b6;       /* deep purple */
-  --accent:#06b6d4;      /* teal */
-  --muted:#6b7280;
-  --bg:#f8fafc;
-  --card:#ffffff;
-  --radius:12px;
-  --maxw:1120px;
-  --container-padding:1rem;
+/* -------------------------------------------
+   GSITEGY - AI & Cloud Consulting Website
+   ------------------------------------------- */
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-*{box-sizing:border-box}
-html,body{height:100%}
-body{
-  margin:0;
-  font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  background:var(--bg);
-  color:#0f172a;
-  -webkit-font-smoothing:antialiased;
-  line-height:1.5;
+body {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  line-height: 1.6;
 }
-.container{width:90%;max-width:var(--maxw);margin:0 auto;padding:0 var(--container-padding)}
-a{color:inherit;text-decoration:none}
 
-/* Header */
-.site-header{
-  background:rgba(255,255,255,0.85);
-  backdrop-filter: blur(6px);
-  box-shadow:0 1px 8px rgba(15,23,42,0.06);
-  position:sticky;top:0;z-index:40;
+/* Navbar */
+.navbar {
+  background-color: #53575c;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  flex-wrap: wrap;
 }
-.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.9rem 0}
-.brand{display:flex;align-items:center;gap:0.75rem}
-.logo{width:100px;height:46px;border-radius:10px;
-  background:linear-gradient(135deg,var(--brand),#7c3aed);
-  display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:0.95rem;
-  box-shadow:0 4px 18px rgba(0,0,0,0.08)}
-.brand-title{font-size:1rem;font-weight:700}
-.nav{display:flex;gap:1rem;font-size:0.95rem}
-.nav a{color:var(--muted);padding:0.45rem 0.6rem;border-radius:8px}
-.nav a:hover{color:#071133;background:rgba(15,23,42,0.03)}
 
-/* Hero */
-.hero{padding:3.5rem 0;background:linear-gradient(90deg, rgba(91,33,182,0.06), rgba(6,182,212,0.03));}
-.hero-grid{display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:center}
-.hero-title{font-size:2rem;margin-bottom:0.5rem}
-.lead{color:var(--muted);max-width:54ch;margin-bottom:1rem}
-.cta{display:inline-block;background:var(--brand);color:#fff;padding:0.75rem 1.2rem;border-radius:10px;text-decoration:none;font-weight:700}
-.secondary{display:inline-block;padding:0.6rem 1rem;border-radius:10px;border:1px solid rgba(15,23,42,0.06);margin-left:0.6rem}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 
-/* Card */
-.card{background:var(--card);padding:1.1rem;border-radius:var(--radius);box-shadow:0 6px 18px rgba(15,23,42,0.04)}
+.logo-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  
+}
 
-/* Sections */
-.section{padding:3rem 0}
-.section h2{font-size:1.25rem;margin-bottom:1rem}
-.grid{display:grid;gap:1rem}
-.products-grid{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-.services-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
-.team-grid{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+.logo-text {
+  font-weight: 700;
+  font-size: 1.4em;
+}
 
-/* Badges and small text */
-.kicker{font-size:0.85rem;color:var(--muted);font-weight:600;margin-bottom:0.5rem}
-.small{font-size:0.95rem;color:var(--muted)}
-.badge{display:inline-block;background:linear-gradient(90deg,var(--accent),#7dd3fc);color:#012; padding:0.25rem 0.6rem;border-radius:999px;font-weight:700;font-size:0.78rem}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #1565c0, #42a5f5);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero-content p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn-primary {
+  background-color: white;
+  color: #0d47a1;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-primary:hover {
+  background-color: #e3f2fd;
+}
+
+/* Section Styling */
+.section {
+  padding: 60px 80px;
+  text-align: center;
+}
+
+.section h2 {
+  margin-bottom: 30px;
+  color: #0d47a1;
+}
+
+.alt-bg {
+  background-color: #f4f6f8;
+}
+
+/* Grid Layout */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* About Section (Flexbox) */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 280px;
+  text-align: left;
+  font-size: 1em;
+  color: #333;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-form input, .contact-form textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.contact-form button {
+  align-self: center;
+  width: 50%;
+}
 
 /* Footer */
-.site-footer{background:#fff;border-top:1px solid rgba(15,23,42,0.04);padding:1.2rem 0;margin-top:2rem;text-align:center;color:var(--muted);font-size:0.95rem}
-
-/* Buttons */
-.btn-mail{display:inline-block;background:transparent;color:var(--brand);border:2px solid var(--brand);padding:0.55rem 0.9rem;border-radius:10px;text-decoration:none;font-weight:700}
-.learn{display:inline-block;background:transparent;color:var(--muted);border:1px solid rgba(15,23,42,0.06);padding:0.5rem 0.9rem;border-radius:8px}
+.footer {
+  background-color: #0d47a1;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  margin-top: 40px;
+}
 
 /* Responsive */
-@media (max-width:980px){
-  .hero-grid{grid-template-columns:1fr}
-  .nav{display:none}
-  .brand-title{display:none}
-  .hero{padding:2.2rem 0}
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+  .section {
+    padding: 40px 20px;
+  }
+  .hero-content h1 {
+    font-size: 1.8em;
+  }
 }
