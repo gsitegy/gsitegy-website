@@ -18,13 +18,14 @@ body {
 
 /* Navbar */
 .navbar {
-  background-color: #53575c;
-  color: white;
+  background-color: white;
+  color: blue;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 60px;
+  padding: 10px 20px;
   flex-wrap: wrap;
+  height: 20vh;
 }
 
 .logo {
@@ -34,22 +35,23 @@ body {
 }
 
 .logo-img {
-  width: 100px;
-  height: 100px;
-  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+  border-radius: 200%;
   
 }
 
 .logo-text {
-  font-weight: 700;
-  font-size: 1.4em;
+  font-weight: 800;
+  font-size: 2em;
 }
 
 .nav-links a {
-  color: white;
+  color: blue;
   text-decoration: none;
-  margin: 0 12px;
-  font-weight: 500;
+  margin: 0 20px;
+  font-weight: 1000;
+  font-size: large;
 }
 
 .nav-links a:hover {
@@ -58,14 +60,14 @@ body {
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(to right, #1565c0, #42a5f5);
+  background: linear-gradient(to right, #536c8a, #617d93);
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70vh;
+  height: 50vh;
   text-align: center;
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 .hero-content h1 {

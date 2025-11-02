@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GSITEGY | AI,Data & Cloud Experts</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
+<script>
+  document.addEventListener('contextmenu', event => event.preventDefault());
+  document.onkeydown = e => {
+    if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key))) {
+      e.preventDefault();
+    }
+  };
+</script>
+
 <body>
 
   <!-- Header -->
   <header class="navbar">
-    <div class="about-image">
-        <img src="GSITEGY.png" alt="GSITEGY" class="logo-img">
-      </div>
+    <div>
+      <img src="GSITEGY.png" alt="GSITEGY" class="logo-img">
+    </div>
     <nav class="nav-links">
       <a href="#home">Home</a>
-      <a href="#services">Services</a>
       <a href="#products">Products</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact Us</a>
     </nav>
   </header>
 
@@ -26,70 +35,81 @@
   <section id="home" class="hero">
     <div class="hero-content">
       <h1>Empowering Enterprises with AI,Data & Cloud Innovations</h1>
-      <p>GSITEGY helps businesses accelerate digital transformation through cloud modernization and intelligent automation.</p>
+     
+      <p> We team of experts in cloud architecture, data science, and intelligent automation help organizations unlock
+        the full potential of Cloud and Artificial Intelligence to accelerate transformation, improve efficiency, and
+        drive growth. Our mission is to enable enterprises to become intelligent, agile, and future-ready by building
+        scalable digital foundations powered by data, automation, and smart decision-making.</p>
+
       <a href="#contact" class="btn-primary">Get Started</a>
     </div>
   </section>
-
+  <!-- Products Section -->
+  <section id="products" class="section alt-bg">
+    <h2>Our Products</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>CloudPulse</h3>
+        <p>Automate cloud operations and monitoring, detecting anomalies before they cause downtime. With predictive
+          analytics and autonomous remediation, you can achieve higher uptime, lower costs, and greater operational
+          efficiency across your cloud environments.</p>
+      </div>
+      <div class="card">
+        <h3>OptiVest</h3>
+        <p>AI-powered investment optimization platform that helps investors and wealth managers maximize returns and
+          minimize risk. With predictive analytics and adaptive learning models, OptiVest continuously fine-tunes
+          portfolios for changing market conditions</p>
+      </div>
+      <div class="card">
+        <h3>CrediSense</h3>
+        <p>CrediSense leverages advanced artificial intelligence to transform the way lenders evaluate creditworthiness.
+          Its predictive models analyze a vast range of data — from financial histories and transaction patterns to
+          behavioral and alternative data — providing a 360° view of borrower reliability.</p>
+      </div>
+    </div>
+  </section>
   <!-- Services Section -->
   <section id="services" class="section">
     <h2>Our Services</h2>
     <div class="grid">
       <div class="card">
         <h3>AI Strategy & Advisory</h3>
-        <p>Helping you design and implement AI solutions that transform your operations and customer experience.</p>
+        <p>We help organizations navigate the complex AI landscape — from defining a clear AI vision to building
+          practical, high-impact roadmaps. Our experts blend business strategy, data science, and change management to
+          ensure AI investments deliver measurable value and long-term scalability.</p>
       </div>
       <div class="card">
         <h3>Cloud Modernization</h3>
-        <p>Migrate and optimize your infrastructure using Microsoft Azure, AWS, or Google Cloud platforms.</p>
+        <p>Enable enterprises to reimagine legacy infrastructure, applications, and processes for agility, scalability,
+          and innovation in the cloud era. Our approach combines intelligent automation, containerization, and
+          cloud-native architectures to drive performance, cost efficiency, and resilience.</p>
       </div>
       <div class="card">
         <h3>Data Engineering</h3>
-        <p>Build scalable data lakes and analytics pipelines to unlock data-driven decision-making.</p>
+        <p>Empowering organizations to transform raw data into reliable, high-quality, and analytics-ready assets. We
+          design, build, and optimize scalable data pipelines and platforms that empower advanced analytics, AI, and
+          real-time decision-making.</p>
       </div>
     </div>
   </section>
 
-  <!-- Products Section -->
-  <section id="products" class="section alt-bg">
-    <h2>Our Products</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>CloudOps Suite</h3>
-        <p>AI-powered cloud operations and monitoring for maximum uptime and efficiency.</p>
-      </div>
-      <div class="card">
-        <h3>InsightAI Platform</h3>
-        <p>Data analytics and visualization platform with predictive modeling and insights automation.</p>
-      </div>
-      <div class="card">
-        <h3>BotBridge</h3>
-        <p>Conversational AI for customer support, lead generation, and internal knowledge bots.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="section">
-    <h2>About GSITEGY</h2>
-      
-    <div class="about-container">
-      <div class="about-text">
-        <p> Technology consulting company focused on Artificial Intelligence and Cloud Solutions. Our team of experts partners with global enterprises to implement scalable, secure, and intelligent digital ecosystems.</p>
-      </div>
-  
-    </div>
-  </section>
 
   <!-- Contact Section -->
   <section id="contact" class="section alt-bg">
     <h2>Contact Us</h2>
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea rows="4" placeholder="Your Message" required></textarea>
-      <button type="submit" class="btn-primary">Send Message</button>
-    </form>
+    <p style="max-width:600px; margin:1rem auto; font-size:1.1rem; color:#444;">
+      Got a question? Want to explore how Cloud and AI can supercharge your business?
+      We’d love to connect, brainstorm ideas, and help you turn your vision into reality.
+    </p>
+    <p style="font-size:1.1rem; color:#444; margin:1rem auto;">
+      Drop us a note — we’ll get back to you faster than your next deployment 🚀
+    </p>
+    <p style="font-size:1.1rem; margin-top:1rem;">
+      📧 <strong>Email:</strong>
+      <a href="mailto:contact@gsitegy.com" style="color:#007BFF; text-decoration:none;">
+        contact@gsitegy.com
+      </a>
+    </p>
   </section>
 
   <!-- Footer -->
@@ -98,4 +118,5 @@
   </footer>
 
 </body>
+
 </html>
