@@ -1,122 +1,385 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GSITEGY | AI,Data & Cloud Expert Consultants</title>
+  <title>Gsitegy — Cloud & AI Consulting</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/emailjs.min.js"></script>
 </head>
-<script>
-  document.addEventListener('contextmenu', event => event.preventDefault());
-  document.onkeydown = e => {
-    if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key))) {
-      e.preventDefault();
-    }
-  };
-</script>
-
 <body>
 
-  <!-- Header -->
-  <header class="navbar">
-    <div>
-      <img src="GSITEGY.png" alt="GSITEGY" class="logo-img">
-    </div>
-    <nav class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#products">Products</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact Us</a>
-    </nav>
-  </header>
-
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <h1>Empowering Enterprises with AI,Data & Cloud Innovations</h1>
-     
-      <p> We team of experts in cloud architecture, data science, and intelligent automation help organizations unlock
-        the full potential of Cloud and Artificial Intelligence to accelerate transformation, improve efficiency, and
-        drive growth. Our mission is to enable enterprises to become intelligent, agile, and future-ready by building
-        scalable digital foundations powered by data, automation, and smart decision-making.</p>
-
-      <a href="#contact" class="btn-primary">Get Started</a>
-    </div>
-  </section>
-  <!-- Products Section -->
-  <section id="products" class="section alt-bg">
-    <h2>Our Products</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>CloudPulse</h3>
-        <p>Automate cloud operations and monitoring, detecting anomalies before they cause downtime. With predictive
-          analytics and autonomous remediation, you can achieve higher uptime, lower costs, and greater operational
-          efficiency across your cloud environments.</p>
-      </div>
-      <div class="card">
-        <h3>OptiVest</h3>
-        <p>AI-powered investment optimization platform that helps investors and wealth managers maximize returns and
-          minimize risk. With predictive analytics and adaptive learning models, OptiVest continuously fine-tunes
-          portfolios for changing market conditions</p>
-      </div>
-      <div class="card">
-        <h3>CrediSense</h3>
-        <p>CrediSense leverages advanced artificial intelligence to transform the way lenders evaluate creditworthiness.
-          Its predictive models analyze a vast range of data — from financial histories and transaction patterns to
-          behavioral and alternative data — providing a 360° view of borrower reliability.</p>
-      </div>
-    </div>
-  </section>
-  <!-- Services Section -->
-  <section id="services" class="section">
-    <h2>Our Services</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>AI Strategy & Advisory</h3>
-        <p>We help organizations navigate the complex AI landscape — from defining a clear AI vision to building
-          practical, high-impact roadmaps. Our experts blend business strategy, data science, and change management to
-          ensure AI investments deliver measurable value and long-term scalability.</p>
-      </div>
-      <div class="card">
-        <h3>Cloud Modernization</h3>
-        <p>Enable enterprises to reimagine legacy infrastructure, applications, and processes for agility, scalability,
-          and innovation in the cloud era. Our approach combines intelligent automation, containerization, and
-          cloud-native architectures to drive performance, cost efficiency, and resilience.</p>
-      </div>
-      <div class="card">
-        <h3>Data Engineering</h3>
-        <p>Empowering organizations to transform raw data into reliable, high-quality, and analytics-ready assets. We
-          design, build, and optimize scalable data pipelines and platforms that empower advanced analytics, AI, and
-          real-time decision-making.</p>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Contact Section -->
-  <section id="contact" class="section alt-bg">
-    <h2>Contact Us</h2>
-    <p style="max-width:600px; margin:1rem auto; font-size:1.1rem; color:#444;">
-      Got a question? Want to explore how Cloud and AI can supercharge your business?
-      We’d love to connect, brainstorm ideas, and help you turn your vision into reality.
-    </p>
-    <p style="font-size:1.1rem; color:#444; margin:1rem auto;">
-      Drop us a note — we’ll get back to you faster than your next deployment 🚀
-    </p>
-    <p style="font-size:1.1rem; margin-top:1rem;">
-      📧 <strong>Email:</strong>
-      <a href="mailto:contact@gsitegy.com" style="color:#007BFF; text-decoration:none;">
-        contact@gsitegy.com
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="#" class="logo">
+        <span class="logo-mark">G</span>sitegy
       </a>
-    </p>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#partners">Partners</a></li>
+        <li><a href="#contact" class="btn btn-primary-sm">Get Started</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <div class="grid-overlay"></div>
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="badge">Cloud & AI Experts</div>
+      <h1>Transform Your Business<br/>with <span class="gradient-text">Cloud &amp; AI</span></h1>
+      <p class="hero-sub">We help enterprises migrate, modernize, and scale on AWS and Azure — powered by AI solutions that deliver real business outcomes.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Book a Free Consultation</a>
+        <a href="#services" class="btn btn-outline">Explore Services</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">150+</span><span class="stat-label">Projects Delivered</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">98%</span><span class="stat-label">Client Satisfaction</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">40%</span><span class="stat-label">Avg. Cost Reduction</span></div>
+      </div>
+    </div>
   </section>
 
-  <!-- Footer -->
+  <!-- PARTNERS -->
+  <section class="partners" id="partners">
+    <div class="container">
+      <p class="partners-label">Certified Partners</p>
+      <div class="partner-logos">
+        <div class="partner-logo">
+          <svg viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg" aria-label="AWS">
+            <text x="5" y="30" font-family="Inter,sans-serif" font-weight="800" font-size="22" fill="currentColor">AWS</text>
+          </svg>
+        </div>
+        <div class="partner-logo">
+          <svg viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg" aria-label="Microsoft Azure">
+            <text x="2" y="30" font-family="Inter,sans-serif" font-weight="800" font-size="16" fill="currentColor">Microsoft Azure</text>
+          </svg>
+        </div>
+        <div class="partner-logo">
+          <svg viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg" aria-label="OpenAI">
+            <text x="5" y="30" font-family="Inter,sans-serif" font-weight="800" font-size="22" fill="currentColor">OpenAI</text>
+          </svg>
+        </div>
+        <div class="partner-logo">
+          <svg viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg" aria-label="Terraform">
+            <text x="2" y="30" font-family="Inter,sans-serif" font-weight="800" font-size="20" fill="currentColor">Terraform</text>
+          </svg>
+        </div>
+        <div class="partner-logo">
+          <svg viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg" aria-label="Kubernetes">
+            <text x="2" y="30" font-family="Inter,sans-serif" font-weight="800" font-size="18" fill="currentColor">Kubernetes</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge badge-dark">What We Do</div>
+        <h2>End-to-End Cloud &amp; AI Solutions</h2>
+        <p>From strategy to deployment, we cover every stage of your cloud and AI journey.</p>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-icon aws-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3>AWS Cloud Migration</h3>
+          <p>Lift-and-shift or full re-architecture — we migrate your workloads to AWS with zero downtime and optimized costs.</p>
+          <ul class="service-list">
+            <li>EC2, EKS &amp; Lambda architectures</li>
+            <li>Database migration (RDS, Aurora)</li>
+            <li>Cost optimization &amp; FinOps</li>
+            <li>Well-Architected reviews</li>
+          </ul>
+        </div>
+
+        <div class="service-card featured-card">
+          <div class="featured-tag">Most Popular</div>
+          <div class="service-icon azure-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3>Azure Cloud Consulting</h3>
+          <p>Design and deploy enterprise-grade solutions on Microsoft Azure — fully integrated with your Microsoft ecosystem.</p>
+          <ul class="service-list">
+            <li>Azure DevOps &amp; CI/CD pipelines</li>
+            <li>Azure Kubernetes Service (AKS)</li>
+            <li>Active Directory &amp; Identity</li>
+            <li>Hybrid cloud with Azure Arc</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon ai-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a7 7 0 0 1 7 7"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h3>AI &amp; ML Solutions</h3>
+          <p>Build intelligent applications powered by LLMs, computer vision, and predictive analytics tailored to your industry.</p>
+          <ul class="service-list">
+            <li>Generative AI &amp; LLM integration</li>
+            <li>Custom ML model development</li>
+            <li>RAG pipelines &amp; vector search</li>
+            <li>AI strategy &amp; roadmap</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon devops-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>DevOps &amp; Infrastructure</h3>
+          <p>Automate your delivery pipeline and infrastructure with modern IaC and GitOps practices.</p>
+          <ul class="service-list">
+            <li>Terraform &amp; Pulumi IaC</li>
+            <li>Docker &amp; Kubernetes</li>
+            <li>GitHub Actions / GitLab CI</li>
+            <li>Observability &amp; monitoring</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon security-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          </div>
+          <h3>Cloud Security</h3>
+          <p>Harden your cloud environment with zero-trust architecture, compliance automation, and threat detection.</p>
+          <ul class="service-list">
+            <li>Zero-trust network design</li>
+            <li>SOC 2 / ISO 27001 compliance</li>
+            <li>SIEM &amp; threat monitoring</li>
+            <li>IAM policy governance</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon data-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
+          <h3>Data Engineering &amp; Analytics</h3>
+          <p>Turn raw data into actionable insights with modern data lakehouse and BI architectures.</p>
+          <ul class="service-list">
+            <li>Data lakehouse on S3 / ADLS</li>
+            <li>Spark, dbt &amp; Databricks</li>
+            <li>Real-time streaming pipelines</li>
+            <li>Power BI &amp; QuickSight dashboards</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="why-us" id="why-us">
+    <div class="container why-us-inner">
+      <div class="why-us-text">
+        <div class="badge badge-dark">Why Gsitegy</div>
+        <h2>Strategy-first. Outcome-driven.</h2>
+        <p>We're not just implementers — we're your long-term technology partner. Every engagement starts with understanding your business goals before touching a single line of infrastructure.</p>
+        <div class="why-items">
+          <div class="why-item">
+            <div class="why-icon">✓</div>
+            <div>
+              <h4>Certified Engineers</h4>
+              <p>AWS Solutions Architects, Azure Experts, and ML engineers with 10+ years average experience.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon">✓</div>
+            <div>
+              <h4>Vendor-Neutral Advice</h4>
+              <p>We recommend the right tool for your problem — not the tool we're paid to sell.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon">✓</div>
+            <div>
+              <h4>Transparent Pricing</h4>
+              <p>Fixed-scope engagements with no hidden fees. Know exactly what you're getting before we start.</p>
+            </div>
+          </div>
+          <div class="why-item">
+            <div class="why-icon">✓</div>
+            <div>
+              <h4>Knowledge Transfer</h4>
+              <p>We train your team as we build, so you're never dependent on us when we're done.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="why-us-visual">
+        <div class="tech-stack-card">
+          <p class="tech-label">Our Core Stack</p>
+          <div class="tech-pills">
+            <span>AWS</span><span>Azure</span><span>Terraform</span><span>Kubernetes</span>
+            <span>Python</span><span>LangChain</span><span>OpenAI</span><span>Databricks</span>
+            <span>dbt</span><span>Spark</span><span>GitHub Actions</span><span>Prometheus</span>
+          </div>
+          <div class="cert-badges">
+            <div class="cert-badge">
+              <div class="cert-icon aws-cert">AWS</div>
+              <span>Solutions Architect<br/>Professional</span>
+            </div>
+            <div class="cert-badge">
+              <div class="cert-icon azure-cert">AZ</div>
+              <span>Azure Solutions<br/>Expert</span>
+            </div>
+            <div class="cert-badge">
+              <div class="cert-icon ai-cert">AI</div>
+              <span>ML Engineering<br/>Certified</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge badge-dark">How We Work</div>
+        <h2>A Proven Engagement Process</h2>
+        <p>Clear milestones, no surprises.</p>
+      </div>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">01</div>
+          <h3>Discovery</h3>
+          <p>We assess your current architecture, goals, and constraints in a structured workshop.</p>
+        </div>
+        <div class="process-arrow">→</div>
+        <div class="process-step">
+          <div class="step-num">02</div>
+          <h3>Strategy</h3>
+          <p>We deliver a detailed roadmap with milestones, risk analysis, and cost projections.</p>
+        </div>
+        <div class="process-arrow">→</div>
+        <div class="process-step">
+          <div class="step-num">03</div>
+          <h3>Build</h3>
+          <p>Our engineers execute the plan with weekly check-ins and full transparency.</p>
+        </div>
+        <div class="process-arrow">→</div>
+        <div class="process-step">
+          <div class="step-num">04</div>
+          <h3>Handover</h3>
+          <p>We document everything and train your team for long-term success.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-inner">
+        <div class="contact-text">
+          <div class="badge">Let's Talk</div>
+          <h2>Ready to Accelerate Your Cloud Journey?</h2>
+          <p>Book a free 30-minute consultation with one of our architects. No sales pitch — just honest advice about your biggest challenges.</p>
+          <div class="contact-info">
+            <div class="contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:contact@gsitegy.com">contact@gsitegy.com</a>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Work Email</label>
+              <input type="email" id="email" name="email" placeholder="jane@company.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" placeholder="Your Company Inc." />
+          </div>
+          <div class="form-group">
+            <label for="service">Service Interest</label>
+            <select id="service" name="service">
+              <option value="">Select a service...</option>
+              <option>AWS Cloud Migration</option>
+              <option>Azure Cloud Consulting</option>
+              <option>AI &amp; ML Solutions</option>
+              <option>DevOps &amp; Infrastructure</option>
+              <option>Cloud Security</option>
+              <option>Data Engineering &amp; Analytics</option>
+              <option>Not sure — need advice</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Tell us about your challenge</label>
+            <textarea id="message" name="message" rows="4" placeholder="Describe your current situation and what you're trying to achieve..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Send Message →</button>
+          <p class="form-note">We respond within 1 business day.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer class="footer">
-    <p>© 2026 GSITEGY | AI,Data & Cloud | All Rights Reserved</p>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="logo"><span class="logo-mark">G</span>sitegy</a>
+        <p>Cloud &amp; AI consulting that delivers measurable business outcomes.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">AWS Migration</a></li>
+            <li><a href="#services">Azure Consulting</a></li>
+            <li><a href="#services">AI &amp; ML</a></li>
+            <li><a href="#services">DevOps</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#why-us">About Us</a></li>
+            <li><a href="#contact">Careers</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 Gsitegy. All rights reserved.</p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
   </footer>
 
+  <script src="main.js"></script>
 </body>
-
 </html>
