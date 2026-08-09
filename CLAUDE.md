@@ -6,8 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Gsitegy is a static one-page marketing site for a cloud & AI consulting business. There is no build system, package manager, or framework — it's plain HTML/CSS/JS served directly.
 
-- `index.html` — the entire page, section by section (nav, hero, partners, services, why-us, process, testimonials, contact, footer). All sections live in this one file; there is no templating or componentization.
-- `styles.css` — all styling, organized into `/* === SECTION === */` comment blocks that mirror the HTML sections (RESET & BASE, BUTTONS, BADGE, NAV, HERO, PARTNERS, SERVICES, WHY US, PROCESS, TESTIMONIALS, CONTACT, FOOTER). Design tokens (colors, radii, shadows) are defined once as CSS custom properties in `:root`.
+- `index.html` — the entire page, section by section (nav, hero, partners, services, why-us, process, contact, footer). All sections live in this one file; there is no templating or componentization.
+- `styles.css` — all styling, organized into `/* === SECTION === */` comment blocks that mirror the HTML sections (RESET & BASE, BUTTONS, BADGE, GRADIENT TEXT, SECTION HEADER, NAV, HERO, PARTNERS, SERVICES, WHY US, PROCESS, CONTACT, FOOTER, FORM SUCCESS STATE, RESPONSIVE). Design tokens (colors, radii, shadows) are defined once as CSS custom properties in `:root`.
 - `main.js` — small vanilla-JS behaviors: hamburger menu toggle, nav scroll shadow, contact form submission via EmailJS, and an IntersectionObserver-driven fade-in for cards/steps.
 - `arch.xml` — a draw.io/diagrams.net architecture diagram (unrelated to the site's own code; depicts an AWS multi-tenant AI document-processing system, likely used as sales/reference material).
 
@@ -27,4 +27,4 @@ The contact form in `index.html` (`#contactForm`) is wired to EmailJS via the CD
 
 - Keep new CSS grouped under the relevant `/* === SECTION === */` header rather than appended at the end of the file.
 - Reuse existing CSS custom properties (`--brand`, `--dark`, `--text`, `--radius`, etc.) instead of hardcoding new colors/spacing.
-- Section anchors (`#services`, `#why-us`, `#partners`, `#testimonials`, `#contact`) are referenced by both the nav and footer links — keep IDs in sync if renaming a section.
+- Section anchors (`#services`, `#why-us`, `#partners`, `#contact`) are referenced by both the nav and footer links — keep IDs in sync if renaming a section.
